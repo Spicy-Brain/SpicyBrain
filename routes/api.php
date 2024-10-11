@@ -6,3 +6,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('tasks', 'App\Http\Controllers\TaskController');
+Route::apiResource('tasks.reminders', 'App\Http\Controllers\ReminderController');
